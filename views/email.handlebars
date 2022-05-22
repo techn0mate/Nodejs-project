@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Your stock is down</title>
+    <style>
+        p,
+        ul {
+            font-family: verdana, 'Poppins', sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .main-box-stk {
+            border: 2px solid rgb(0, 140, 145);
+            border-radius: 7px;
+            background-color: rgb(198, 235, 250);
+            padding: 10px;
+        }
+        .un-sub{
+            font-size: .65em;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .buy-btn{
+            margin-top:8px;
+            font-family: verdana, 'poppins', sans-serif;
+            text-decoration: none;
+            color:white;
+            background-color: rgb(24, 172, 98);
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: 2px solid rgb(15, 131, 73);
+            display:block;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box-stk">
+        <p>Hi {{userN}},</p>
+        <ul>
+            <li>Stock {{name}}</li>
+            <li>Down by: {{pct}}</li>
+            <li>Current Price: {{pVal}}</li>
+            <li>52 Week High {{hVal}}</li>
+            <li>52 Week Low {{lVal}}</li>
+        </ul>
+        <a class="buy-btn" target="_blank" href="https://indgeek.com/go/groww">Buy {{name}}</a>
+    </div>
+    <p class="un-sub">If you wish to unsub <a href="/">click here</a></p>
+
+
+
+</body>
+
+</html>
