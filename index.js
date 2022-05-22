@@ -10,6 +10,7 @@ const app = express();
 
 cron.schedule("30 10,14 * * *", async () => {
   console.log("cron is working");
+  scrapeChannel("https://groww.in/markets/top-losers?index=GIDXNIFTY100");
 });
 
 var stockApi;
