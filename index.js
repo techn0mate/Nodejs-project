@@ -12,10 +12,6 @@ cron.schedule("30 10,14 * * *", async () => {
   console.log("cron is working");
 });
 
-app.get("/", (req, res) => {
-  res.send("This is working");
-});
-
 var stockApi;
 
 async function scrapeChannel(url) {
@@ -128,6 +124,10 @@ async function scrapeChannel(url) {
 scrapeChannel("https://groww.in/markets/top-losers?index=GIDXNIFTY100");
 
 const port = process.env.PORT || 3000;
+
+app.get('/', (req, res)=>{
+  res.send(stockApi)
+})
 
 app.listen(port, () => {
   console.log(`server started at port ${port}`);
